@@ -1,0 +1,7 @@
+project: python-minifier
+target: fuzz-min
+
+cmds:
+  - cmd: /src/mayhem/fuzz_min.py
+    libfuzzer: true
+    timeout: 12
