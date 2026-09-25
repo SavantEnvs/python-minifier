@@ -1,0 +1,10 @@
+# Mayhem target: python-minifier source-code minifier (Atheris/libFuzzer harness).
+# The cmd binary is the compiled ELF launcher that drives mayhem/fuzz_min.py; Atheris
+# instruments the python_minifier package so the run records coverage (edges).
+project: savantenvs/python-minifier
+target: fuzz-min-buggy-mhh-run-4
+# origin: https://app.mayhem.security/mayhemheroes/python-minifier/fuzz-min/4
+
+cmds:
+  - cmd: /mayhem/fuzz_min
+    libfuzzer: true
